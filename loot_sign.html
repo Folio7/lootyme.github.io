@@ -1,0 +1,77 @@
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	var username = $("[name='username']");
+	var mail = $("[name='email']");
+	var pass = $("[name='password']");
+
+var alea = makeid();
+
+$("[name='username']").val(alea);
+$("[name='email']").val(alea+'@gmail.com');
+$("[name='password']").val(alea);
+
+    $("button").click();
+   //('avyy rah tyy');
+  //post register https://lootbull.com/register.php
+
+
+console.log(alea);
+
+});
+
+
+function makeid() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 10; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+
+
+</script>
+
+
+
+
+<form class="pt-2" action="https://lootbull.com/register.php" method="POST">
+                <div class="form-group">
+                  <input type="text" name="username" class="form-control form-control-lg bg-dark" placeholder="Enter username" value="" maxlength="20" required="required">
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                  <input type="email" name="email" class="form-control form-control-lg bg-dark" placeholder="Enter email" value="" maxlength="100" required="required">
+                  <div class="input-group-append" style="cursor: pointer;" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-custom-class="popover-info" title="" data-original-title="Please use real email" data-content="Email is required to make changes to your account. Temporary addresses will not be accepted."><span class="input-group-text bg-dark">  <i class="mdi mdi-information-variant text-white mr-0"></i> </span></div>
+                </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                  <input type="password" class="form-control form-control-lg bg-dark" placeholder="Enter password" name="password" id="password-field" maxlength="100" required="required">
+                   <div class="input-group-append"><span class="input-group-text bg-dark"> <i class="mdi mdi-eye text-white mr-0" style="cursor: pointer;" id="passwordeye" onclick="togglePass();"></i> </span></div>
+                 </div>
+                </div>
+                <div class="mt-3">
+                   <p class="text-muted">By registering you agree to <a href="tos.php" target="_blank"><u>Terms of Service</u></a></p>
+                  <button class="btn btn-block btn-success btn-lg btn-rounded" type="submit">Create account</button>
+                </div>
+               
+
+                
+                <div class="text-center mt-4 mb-0 font-weight-light">
+                  <p class="mb-0">Already have an account? <a href="login.php" class="text-info">Sign in here</a></p>
+                </div>
+              </form>
+
+
+              
+
+              <br><br>
+             <small> <b><span style="color:#00FF00;">•</span> <span class="nln">1353</span></b> users online right now</small>
+              </form>
+			  
+			  
